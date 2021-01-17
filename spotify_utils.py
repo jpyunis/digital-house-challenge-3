@@ -1,6 +1,4 @@
 import os
-import sys
-import json
 import spotipy
 from json.decoder import JSONDecodeError
 import configparser
@@ -12,9 +10,8 @@ username = config.get('SPOTIFY', 'username')
 scope = config.get('SPOTIFY', 'scope')
 
 
-def spotify():
-    print('\n')
-    print(f' SPOTIFY '.center(80, '*'))
+def connect():
+    # print(f' SPOTIFY '.center(80, '*'))
     try:
         token = spotipy.util.prompt_for_user_token(username, scope)
     except (AttributeError, JSONDecodeError):
@@ -22,7 +19,10 @@ def spotify():
         token = spotipy.util.prompt_for_user_token(username, scope)
 
     # Create Spotify object
-    spotifyObject = spotipy.Spotify(auth=token)
+    return spotipy.Spotify(auth=token)
+
+
+
 
 
 def main():
@@ -30,7 +30,7 @@ def main():
     os.environ['SPOTIPY_CLIENT_SECRET'] = config.get('SPOTIFY', 'SPOTIPY_CLIENT_SECRET')
     os.environ['SPOTIPY_REDIRECT_URI'] = config.get('SPOTIFY', 'SPOTIPY_REDIRECT_URI')
 
-    spotify()
+    connect()
 
 
 if __name__ == "__main__":
