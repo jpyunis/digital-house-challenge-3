@@ -23,3 +23,15 @@ def spotify():
 
     # Create Spotify object
     spotifyObject = spotipy.Spotify(auth=token)
+
+
+def main():
+    os.environ['SPOTIPY_CLIENT_ID'] = config.get('SPOTIFY', 'SPOTIPY_CLIENT_ID')
+    os.environ['SPOTIPY_CLIENT_SECRET'] = config.get('SPOTIFY', 'SPOTIPY_CLIENT_SECRET')
+    os.environ['SPOTIPY_REDIRECT_URI'] = config.get('SPOTIFY', 'SPOTIPY_REDIRECT_URI')
+
+    spotify()
+
+
+if __name__ == "__main__":
+    main()
