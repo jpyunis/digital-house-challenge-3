@@ -1,8 +1,21 @@
-# digital-house-challenge-3
+# Music Genre Recognition
+
+Music genres are categories that have arisen through a complex interplay of cultures, artists, and market forces to characterize similarities between compositions and organize music collections.
+
+
+## Data
+
+The FMA aims to overcome this hurdle by providing 917 GiB and 343 days of Creative Commonslicensed audio from 106,574 tracks from 16,341 artists and 14,854 albums, arranged in a hierarchical taxonomy of 161 genres. It provides full-length and high-quality audio, pre-computed features, together with track- and user-level metadata, tags, and free-form text such as biographies.
+
+- tracks.csv: per track metadata such as ID, title, artist, genres, tags and play counts, for all 106,574 tracks.
+- genres.csv: all 163 genres with name and parent (used to infer the genre hierarchy and top-level genres).
+- features.csv: common features extracted with librosa.
+- echonest.csv: audio features provided by Spotify for a subset of 13,129 tracks.
 
 ## Setup
 
-1. Download project with `git clone https://github.com/[username]/digital-house-challenge-3.git`
+1. Download project with 
+`git clone https://github.com/[username]/digital-house-challenge-3.git`
     - To update changes from GH into local repo: 
         `git pull origin master`
     - Save local changes to github with:
