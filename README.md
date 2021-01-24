@@ -2,6 +2,14 @@
 
 Music genres are categories that have arisen through a complex interplay of cultures, artists, and market forces to characterize similarities between compositions and organize music collections.
 
+## Notebooks
+
+1. [Data Analysis](Data Analysis.ipynb)
+    - Exploracion y analisis de los datasets
+    - Enriquecimiento de los datos
+    - Limpieza de datos
+    - Generacion de un unico dataset integrado y limpio
+2. [Visualizaciones](Visualizaciones.ipynb)
 
 ## Data
 
@@ -11,6 +19,7 @@ The FMA aims to overcome this hurdle by providing 917 GiB and 343 days of Creati
 - genres.csv: all 163 genres with name and parent (used to infer the genre hierarchy and top-level genres).
 - features.csv: common features extracted with librosa.
 - echonest.csv: audio features provided by Spotify for a subset of 13,129 tracks.
+
 
 ## Setup
 
