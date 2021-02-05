@@ -9,6 +9,7 @@ data/
 *.db
 *.wav
 *.mp3
+.cache*
 
 # C extensions
 *.so
