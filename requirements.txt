@@ -1,5 +1,0 @@
-spotipy
-librosa
-audioread
-pydot
-python-dotenv

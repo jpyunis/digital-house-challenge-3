@@ -1,7 +1,7 @@
 # Music Genre recognition
 
 ## Installing
-Install dependencies with
+Install dependencies with:
 
 ```pip install -r requirements.txt```
 

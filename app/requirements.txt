@@ -1,1 +1,6 @@
 fastapi[all]
+spotipy
+librosa
+audioread
+pydot
+python-dotenv
