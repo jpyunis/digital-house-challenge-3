@@ -6,6 +6,9 @@ __pycache__/
 # Project files
 config.ini
 data/
+*.db
+*.wav
+*.mp3
 
 # C extensions
 *.so
