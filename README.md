@@ -1,17 +1,40 @@
 # Music Genre Recognition
 
+![musica](app/static/musica.jpeg)
+
 Music genres are categories that have arisen through a complex interplay of cultures, artists, and market forces to characterize similarities between compositions and organize music collections.
 
 ## Notebooks
 
-1. [Data Analysis](Data%20Analysis.ipynb)
+1. [Data Analysis](notebooks/Data%20Analysis.ipynb)
     - Exploracion y analisis de los datasets
     - Enriquecimiento de los datos
     - Limpieza de datos
     - Generacion de un unico dataset integrado y limpio
-2. [Visualizaciones](Visualizaciones.ipynb)
+2. [Visualizaciones](notebooks/Visualizaciones.ipynb)
+3. [Clasificacion](notebooks/Clasificacion_Avanzada.ipynb)
+4. [Modelos y Resultados](notebooks/Modelos_y_resultados.ipynb)
 
-## Data
+
+## App
+
+[Music Genre Recognition API](app/README.md) developed with [FastAPI](https://fastapi.tiangolo.com/)
+
+- Full Docker integration (Docker based).
+- Production ready Python web server using Uvicorn and Gunicorn. 
+- Python FastAPI backend:
+    - Fast: Very high performance, on par with NodeJS and Go (thanks to Starlette and Pydantic).
+    - Intuitive: Great editor support. Completion everywhere. Less time debugging.
+    - Easy: Designed to be easy to use and learn. Less time reading docs.
+    - Short: Minimize code duplication. Multiple features from each parameter declaration.
+    - Robust: Get production-ready code. With automatic interactive documentation.
+    - Standards-based: Based on (and fully compatible with) the open standards for APIs: OpenAPI and JSON Schema.
+    - Many other features including automatic validation, serialization, interactive documentation, authentication with OAuth2 JWT tokens, etc.
+- SQLAlchemy models (independent of Flask extensions, so they can be used with Celery workers directly).
+- Alembic migrations.
+
+
+## Data for Model training
 
 The FMA aims to overcome this hurdle by providing 917 GiB and 343 days of Creative Commonslicensed audio from 106,574 tracks from 16,341 artists and 14,854 albums, arranged in a hierarchical taxonomy of 161 genres. It provides full-length and high-quality audio, pre-computed features, together with track- and user-level metadata, tags, and free-form text such as biographies.
 
@@ -55,7 +78,7 @@ The FMA aims to overcome this hurdle by providing 917 GiB and 343 days of Creati
 2. Download fma dataset [fma_metadata.zip](https://os.unil.cloud.switch.ch/fma/fma_metadata.zip) in data/ folder
 3. Python environment used: dhdsblend
     - To activate run `conda activate dhdsblend`
-4. Install additional python libraries `pip install -r requirements.txt`
+4. Install additional python libraries `pip install -r app/requirements.txt`
 
 
 To use Spotify API, create file named 'config.ini' with the following information:
@@ -85,10 +108,6 @@ It is a Python module to analyze audio signals in general but geared more toward
 - [Podcasts dataset](https://podcastsdataset.byspotify.com/)
 - [Spotify Playlists](chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=AIcrowd%20%7C%20Spotify%20Million%20Playlist%20Dataset%20Challenge%20%7C%20Challenges&pos=2287&uri=https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge)
 - [Spotify Datasets](https://research.atspotify.com/datasets/)
-
-### Notebooks
-- [Music Genre Classification with Python](https://towardsdatascience.com/music-genre-classification-with-python-c714d032f0d8)
-
 
 ### Data augmentation
 - [Spotify API](https://developer.spotify.com/documentation/web-api/reference/tracks/)

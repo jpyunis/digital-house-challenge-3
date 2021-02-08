@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Music Genre recognition</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+  </head>
+  <body>
+      <ul id="navigation">
+      {% for item in navigation %}
+          <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+      {% endfor %}
+      </ul>
+
+    <div class=page>
+      <h1>Music Genre recognition</h1>
+
+    {% block body %}{% endblock %}
+    </div>
+  </body>
+</html>
